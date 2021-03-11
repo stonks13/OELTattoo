@@ -18,7 +18,7 @@ nav{
 	z-index: 100;
 }
 header{
-	background-image: url("file:///home/xavi/Documents/OEL/src/img/banner.jpg");
+	background-image: url("../img/banner.jpg");
 	background-size: cover;
 	height: 560px;
 	background-position: center;
