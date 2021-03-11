@@ -1,0 +1,111 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none; 
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
+p{
+	font-family: 'Work Sans', sans-serif;
+}
+nav{
+	height: 80px;
+	line-height: 80px;
+	position: fixed;
+	width: 100%;
+	background-color: rgb(63, 63, 63);
+	z-index: 100;
+}
+header{
+	background-image: url("file:///home/xavi/Documents/OEL/src/img/banner.jpg");
+	background-size: cover;
+	height: 560px;
+	background-position: center;
+	position: relative;
+	background-repeat: no-repeat;
+	margin-bottom: 40px;
+}
+
+.sideNavBar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.sideNavBar img {
+	margin: 0 20px;
+	height: 80px;
+	width: auto;
+}
+#mainbox{
+	margin-right: 40px;
+	font-size: 24px;
+	cursor: pointer;
+	transition: all .6s;
+	color: white;
+}
+.sidemenu{
+ position: fixed;
+ top: 0px;
+ right: 0px;
+ height: 100%;
+ width: 0px;
+ background-color: #222;
+ z-index: 1;
+ padding-top: 100px;
+ overflow-x: hidden;
+ transition: all .5s;
+}
+.sidemenu a{
+ padding: 8px 8px 8px 64px;
+ text-decoration: none;
+ font-size: 20px;
+ color: #999;
+ display: block;
+}
+.sidemenu a:hover{
+  color: white;
+}
+.sidemenu .closebtn{
+ position: absolute;
+ top: 0px;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 32px;
+ cursor: pointer;
+}
+@media only screen and (min-width: 768px){
+	.sidemenu {
+		transition: 0s;
+		padding: 0;
+		margin: 0;
+		background-color: rgba(0,0,0,0.2);
+		line-height: 80px;
+		width: auto !important;
+		background-color: transparent;
+		float: right;
+		position: inherit;
+	}
+	.sidemenu a {
+		display: inline-block;
+		padding: 0;
+		margin: 0 80px 0 0;
+	}
+	#mainbox {
+		display: none;
+	}
+	.sidemenu .closebtn {
+		display: none;
+	}
+	.sideNavBar{
+		display: block;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.sideNavBar {
+		width: 1024px;
+		margin: auto;
+	}
+
+
+}

@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none; 
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
+p{
+	font-family: 'Work Sans', sans-serif;
+}
+header{
+	background-image: url("file:///home/xavi/Documents/OEL/src/img/banner.jpg");
+	background-size: cover;
+	height: 400px;
+	background-position: center;
+	position: relative;
+	background-repeat: no-repeat;
+	margin-bottom: 40px;
+}
+
+label{
+	float: right;
+	color: black;
+	float: right;
+	margin: 0 40px 0 ;
+	font-size: 26px;
+	line-height: 80px;
+	display: block;
+	cursor: pointer;
+
+}
+#toggle{
+	display: none;
+}
+nav{
+	height: 80px;
+	line-height: 80px;
+}
+header nav img {
+	margin: 0 20px;
+	height: 80px;
+	width: auto;
+}
+
+.menu{
+	text-align: center;
+	width: 100%;
+	display: none;
+	position: relative;
+	top: -40px;
+	background-color: black;
+}
+nav div a{
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin: 0;
+	font-size: 24px;
+	line-height: 80px;
+}
+
+#toggle:checked + .menu{
+	display:block;
+}
+
+@media only screen and (min-width: 768px){
+	label {
+		display: none;
+	}
+	.menu{
+		display: block;
+		float: right;
+		margin: 0 30px;
+		width: auto;
+		top: 0;
+		background-color: transparent;
+	}
+	nav div a{
+		display: inline-block;
+		margin: 0 10px;
+		background-color: rgba(0,0,0,0.2);
+		line-height: 0px;
+		border-bottom:2px solid white;
+	}
+
+
+}
+@media only screen and (min-width: 1024px){
+	nav{
+		width: 1024px;
+		margin: auto;
+	}
+
+}

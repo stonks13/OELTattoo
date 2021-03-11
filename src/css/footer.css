@@ -1,0 +1,58 @@
+footer{
+	color: white;
+	height: 200px;
+	background-color: black;
+	display: grid;
+	grid-template-columns: auto;
+	padding-top: 40px;
+}
+.menuNetworks {
+	display: flex;
+	justify-content: center;
+	column-gap: 20px;
+	padding: 10px;
+}
+.socialNetworks{
+	height: 45px;
+	width: 45px;
+}
+.secondMenuNav {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	text-align: center;
+	line-height: 40px;
+	margin-bottom: 20px;
+}
+.secondMenuNav a {
+	align-self: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-bottom: 2px solid white;
+	color: white; 
+	margin: 0 10px;
+}
+h5{
+	height: 20px;
+	text-align: center;
+}
+@media only screen and (min-width: 425px){
+	.secondMenuNav a {
+		margin: 0 15px;
+	}
+}
+@media only screen and (min-width: 768px){
+	
+	.secondMenuNav a {
+		margin: 0 20px;
+	}
+}
+@media only screen and (min-width: 1024px){
+	footer div{
+		width: 1024px;
+		margin: auto;
+	}
+	.secondMenuNav a {
+		margin: 0 30px;
+	}
+	
+}

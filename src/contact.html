@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OEL TATTOO</title>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="sideNavBar">
+				<img src="img/Logo.png" alt="">	
+				<div id="mainbox" onclick="openFunction()">&#9776;</div>
+				<div class="sidemenu" id="menu">
+					<a href="index.html">Home</a>
+					<a href="gallery.html">Galery</a>
+					<a href="aboutMe.html">About Me</a>
+					<a href="contact.html">Contact</a>
+					<a class="closebtn" onclick="closeFunction()">&times;</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h1>Contact Us</h1>
+			<h2>Tell us your idea of tattoo or for more information Contact Us below. You can consult with no problem! We will get back to you at the earliest!</h2>
+			<form>
+				<div class="messageSection">
+					<h3 for="message">Message</h3>
+					<textarea class="messageBox" type="textarea" id="message" name="message" maxlength="6000" rows="7"></textarea>
+				</div>
+				<div class="dataSection">
+					<div class="nameSection">
+						<h3 for="personName">Your Name:</h3>
+						<input type="text" name="personName">
+					</div>
+					<div class="mailSection">
+						<h3 for="mail">Email:</h3>
+						<input type="email" name="mail">
+					</div>
+				</div>
+				<button class="sendBtn">Send ⟿</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<div class="menuNetworks">
+			<a href="#"><img src="img/Instagram.png" class="socialNetworks"></a>
+			<a href="#"><img src="img/Facebook.png" class="socialNetworks"></a>
+			<a href="#"><img src="img/Twitter.png" class="socialNetworks"></a>
+			<a href="#"><img src="img/Pinterest.png" class="socialNetworks"></a>
+		</div>
+		<div class="secondMenuNav">
+			<a href="index.html">Home</a>
+			<a href="gallery.html">Galery</a>
+			<a href="aboutMe.html">About Me</a>
+			<a href="contact.html">Contact</a>
+		</div>
+		<h5>OEL Tattoo &copy; 2021</h5>
+	</footer>	
+</body>
+<script src="js/navfunctions.js"></script>
+</html>
