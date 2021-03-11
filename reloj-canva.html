@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<script>
+    class numeros {
+        static contador;
+        canvas;
+        constructor(i){
+            this.contador = i;
+            var numero = document.createElement("canvas");
+            numero.id = "numero" + this.contador;
+            numero.width = 200;
+            numero.height = 400;
+            numero.style.marginRight = "10px";
+            document.getElementById("reloj").appendChild(numero);
+        }
+        numero(){
+            var canvas = document.getElementById("numero"+this.contador);
+            if(canvas.getContext){
+                this.itemA(canvas, 0.1);
+                this.itemB(canvas, 0.1);
+                this.itemC(canvas, 0.1);
+                this.itemD(canvas, 0.1);
+                this.itemE(canvas, 0.1);
+                this.itemF(canvas, 0.1);
+                this.itemG(canvas, 0.1);
+            }else {
+                console.log("aaaaaaaaaaa");
+            }
+        }
+        getNumeros(num){
+            this.numero();
+            var canvas = document.getElementById("numero"+this.contador);
+            if(canvas.getContext){
+                switch(num){
+                    case 0:
+                        this.itemA(canvas, 1);
+                        this.itemC(canvas, 1);
+                        this.itemD(canvas, 1);
+                        this.itemE(canvas, 1);
+                        this.itemF(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 1:
+                        this.itemF(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 2:
+                        this.itemA(canvas, 1);
+                        this.itemB(canvas, 1);
+                        this.itemC(canvas, 1);
+                        this.itemE(canvas, 1);
+                        this.itemF(canvas, 1);
+                        break;
+                    case 3:
+                        this.itemA(canvas, 1);
+                        this.itemB(canvas, 1);
+                        this.itemC(canvas, 1);
+                        this.itemF(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 4:
+                        this.itemB(canvas, 1);
+                        this.itemD(canvas, 1);
+                        this.itemF(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 5:
+                        this.itemA(canvas, 1);
+                        this.itemB(canvas, 1);
+                        this.itemC(canvas, 1);
+                        this.itemD(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 6:
+                        this.itemA(canvas, 1);
+                        this.itemB(canvas, 1);
+                        this.itemC(canvas, 1);
+                        this.itemD(canvas, 1);
+                        this.itemE(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 7:
+                        this.itemA(canvas, 1);
+                        this.itemF(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 8:
+                        this.itemA(canvas, 1);
+                        this.itemB(canvas, 1);
+                        this.itemC(canvas, 1);
+                        this.itemD(canvas, 1);
+                        this.itemE(canvas, 1);
+                        this.itemF(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+                    case 9:
+                        this.itemA(canvas, 1);
+                        this.itemB(canvas, 1);
+                        this.itemC(canvas, 1);
+                        this.itemD(canvas, 1);
+                        this.itemF(canvas, 1);
+                        this.itemG(canvas, 1);
+                        break;
+
+                }
+            }else {
+                console.log("aaaaaaaaaaa");
+            }
+        }
+        
+        itemA(canvas, opacidad){
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(20, 0, 160, 20);
+            ctx.fillStyle = "rgba(0,0,0,"+opacidad+")";
+            ctx.fillRect(20, 0, 160, 20);
+        }
+        itemB(canvas, opacidad){
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(20, 190, 160, 20);
+            ctx.fillStyle = "rgba(0,0,0,"+opacidad+")";
+            ctx.fillRect(20, 190, 160, 20);
+        }
+        itemC(canvas, opacidad){
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(20, 380, 160, 20);
+            ctx.fillStyle = "rgba(0,0,0,"+opacidad+")";
+            ctx.fillRect(20, 380, 160, 20);
+        }
+        itemD(canvas, opacidad){
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 20, 20, 170);
+            ctx.fillStyle = "rgba(0,0,0,"+opacidad+")";
+            ctx.fillRect(0, 20, 20, 170);
+        }
+        itemE(canvas, opacidad){
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 210, 20, 170);
+            ctx.fillStyle = "rgba(0,0,0,"+opacidad+")";
+            ctx.fillRect(0, 210, 20, 170);
+        }
+        itemF(canvas, opacidad){
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(180, 20, 20, 170);
+            ctx.fillStyle = "rgba(0,0,0,"+opacidad+")";
+            ctx.fillRect(180, 20, 20, 170);
+        }
+        itemG(canvas, opacidad){
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(180, 210, 20, 170);
+            ctx.fillStyle = "rgba(0,0,0,"+opacidad+")";
+            ctx.fillRect(180, 210, 20, 170);
+        }
+    }
+    window.onload = function (){
+        var hora1 = new numeros(1);
+        var hora2 = new numeros(2);
+
+        var minuto1 = new numeros(3);
+        var minuto2 = new numeros(4);
+
+        var segundo1 = new numeros(5);
+        var segundo2 = new numeros(6);
+        setInterval(function(){
+            var hoy = new Date();
+            var horas = hoy.getHours() + "" + hoy.getMinutes() + hoy.getSeconds();
+            var minutos = hoy.getMinutes() + "";
+            var segundos = hoy.getSeconds() + "";
+            if(Number(horas)< 10){
+                hora1.getNumeros(0);
+                hora2.getNumeros(Number(horas.charAt(0)));
+            } else {
+                hora1.getNumeros(Number(horas.charAt(0)));
+                hora2.getNumeros(Number(horas.charAt(1)));
+            }
+            if(Number(minutos)< 10){
+                minuto1.getNumeros(0);
+                minuto2.getNumeros(Number(minutos.charAt(0)));
+            } else {
+                minuto1.getNumeros(Number(minutos.charAt(0)));
+                minuto2.getNumeros(Number(minutos.charAt(1)));
+            }
+            if(Number(segundos)< 10){
+                segundo1.getNumeros(0);
+                segundo2.getNumeros(Number(segundos.charAt(0)));
+            } else {
+                segundo1.getNumeros(Number(segundos.charAt(0)));
+                segundo2.getNumeros(Number(segundos.charAt(1)));
+            }
+
+        }, 1000);
+        
+        
+    }
+</script>
+<body>
+    <div id="reloj">
+    </div>
+</body>
+</html>
